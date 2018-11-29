@@ -1,0 +1,44 @@
+<div id="dimpvis_heatmap_od_q2">
+    <div>
+        <div>
+            <h4>DimpVis</h4>
+            <a target="_blank" href="modules/Colours/Heatmap.html"><img style="border:5px solid #BDBDBD" width="200" height="200" src="modules/HeatmapThumbnail.png" /></a>
+        </div>
+    </div>
+    <div id="heatmap_od_q2" class="form-group">
+        <h4 class="question">Question</h4>
+        <strong>OD.Q2: Find the first year when friendship of 24 and 14 increase while its 8 neighbor stay the same or decrease?</strong>
+
+        <div id="heatmap_od_q2">
+            <div class="radio"><label><input type="radio" id="a1" name="heatmap_od_q2" value="A"> 1-2</label></div>
+            <div class="radio"><label><input type="radio" id="a2" name="heatmap_od_q2" value="B"> 2-3</label></div>
+            <div class="radio"><label><input type="radio" id="a3" name="heatmap_od_q2" value="C"> 3-4</label></div>
+            <div class="radio"><label><input type="radio" id="a4" name="heatmap_od_q2" value="D"> 4-5</label></div>
+            <div class="radio"><label><input type="radio" id="a5" name="heatmap_od_q2" value="E"> 5-6</label></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    (function() {
+        var data = {};
+        experimentr.startTimer('dimpvis_heatmap_od_q2');
+
+        d3.selectAll('input')
+            .filter(function(d) {
+                return this.name === 'heatmap_od_q2' ? this : null;
+            })
+            .on('change', function() {
+                data.heatmap_od_q2 = this.value;
+                validate();
+            });
+
+        function validate() {
+            if (data.heatmap_od_q2) {
+                experimentr.endTimer('dimpvis_heatmap_od_q2');
+                experimentr.addData(data);
+                experimentr.release();
+            }
+        }
+    }());
+</script>

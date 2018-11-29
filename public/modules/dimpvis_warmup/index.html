@@ -1,0 +1,44 @@
+<div id="dimpvis_warmup">
+    <h2 class="page-header">DimpVis Warmup</h2>
+    <div>
+        <div>
+            <h3>Data Introduction</h3>
+            <p>The data is the changing relationship between a group of freshmen during their first semester.</p>
+            <p>It is divided into 7 periods. We use a heatmap to encode the data</p>
+        </div>
+        <div>
+            <h3>Visualization</h3>
+            <h4>Time Slider</h4>
+            <a target="_blank" href="modules/Colours/Heatmap.1.html"><img style="border:5px solid #BDBDBD" width="200" height="200" src="modules/HeatmapThumbnail.PNG" /></a>
+        </div>
+        <div>
+            <h4>DimpVis</h4>
+            <a target="_blank" href="modules/Colours/Heatmap.html"><img style="border:5px solid #BDBDBD" width="200" height="200" src="modules/HeatmapThumbnail.PNG" /></a>
+        </div>
+        <div>
+            <h4>Small Multiples</h4>
+            <a target="_blank" style="font-size:20px; margin-bottom:90px" href="modules/686_heatmap.pdf">Heat Map Small Multiples File</a>
+            <br>
+        </div>
+        <div>
+            <h3>Warmup Questions</h3>
+            <p>After the friendship of 13 and 2 have been increasing, find the first period when it decrease?</p>
+            <p>After the friendship of 30 and 7 have been increasing, find the first period when it decrease?</p>
+            <p>After the friendship of 20 and 13 have been increasing, find the first period when it decrease?</p>
+            <p>When is the first best friendship formed and who are them?</p>
+            <p>Which period have the largest number of best friend?</p>
+            <p>which period have no best friend(answer any of period, one is enough)?</p>
+        </div>
+    </div>
+
+
+</div>
+<script>
+    (function() {
+        experimentr.startTimer('dimpvis_warmup');
+        experimentr.release();
+        experimentr.onNext(function() {
+            experimentr.endTimer('section1_intro');
+        });
+    }());
+</script>

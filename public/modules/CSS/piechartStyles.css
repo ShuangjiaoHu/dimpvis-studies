@@ -1,0 +1,65 @@
+/** Some styles for the piechart*/
+body {
+    /**Disables default selections (text, svg elements) of the browser*/
+    -webkit-user-select: none;
+    /**overflow:hidden;*/
+    background-color: #FFF;
+}
+#graphTitle{
+    font-family: sans-serif;
+    font-size:18px;
+    fill:#666;
+}
+
+/*White layer underneath the main hint path*/
+#pathUnderlayer{
+    stroke-width:7;
+    stroke:#FFF;
+    fill:none;
+}
+
+/**The main hint path*/
+#path{
+    stroke-width:2;
+    fill:none;
+    stroke:#969696;
+    /**stroke:white;*/
+}
+
+/*Labels on the hint path */
+.hintLabels {
+    font-family: sans-serif;
+    font-size:10px;
+    font-weight:bold;
+    text-anchor:middle;
+    fill:#666;
+    cursor:pointer;
+}
+
+.gDisplayArcs{
+    stroke:none;
+}
+/*The interaction path (sine wave)*/
+.interactionPath{
+    stroke-dasharray:3,3;
+    fill: none;
+    stroke:#BDBDBD;
+}
+
+/*The anchor along the interaction path */
+/**#anchor{
+    fill: none;
+    stroke-width:3;
+}*/
+
+/** Styles for the colour scale display */
+.legend text {
+    fill:#EDEDED;
+    font-family: sans-serif;
+    font-size:10px;
+}
+/*For the short hint path */
+#forwardPath, #backwardPath{
+    stroke-width:2;
+    fill:none;
+}
