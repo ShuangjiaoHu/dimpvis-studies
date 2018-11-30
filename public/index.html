@@ -2,6 +2,13 @@
 
 <meta charset="utf-8">
 <title>User Study</title>
+<style>
+    #mainSvg {
+        margin-left: -60px;
+        width: 1000px;
+        height: 750px;
+    }
+</style>
 
 <script src="/scripts/d3/d3.min.js"></script>
 <script src="experimentr.js"></script>
@@ -14,6 +21,14 @@
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />
 <link rel="stylesheet" type="text/css" href="css/main.css" />
+<link rel="stylesheet" type="text/css" href="modules/CSS/heatmapStyles.css" />
+<link rel="stylesheet" type="text/css" href="modules/CSS/colorbrewer.css" />
+
+<script type="text/javascript" src="modules/JS/d3.js"></script>
+<script type="text/javascript" src="modules/JS/Heatmap.js"></script>
+<script type="text/javascript" src="modules/JS/util.js"></script>
+<script type="text/javascript" src="modules/JS/Slider.js"></script>
+<script type="text/javascript" src="modules/Datasets/VanDeBuntNetwork.js"></script>
 
 <body></body>
 
@@ -46,32 +61,33 @@
     info['current_question'] = 0;
 
     var modules = [
-        // // study introduction
-        // 'modules/dimpvis_consent/', //must have
+        // study introduction
+        'modules/dimpvis_consent/', //must have
 
-        // // demographics  //must have
+        // demographics  //must have
         // 'modules/dimpvis_demographics/',
 
-        // // section introduction
+        // section introduction
         'modules/dimpvis_intro/',
 
-        // // warm up introduction
+        // warm up introduction
 
-        // // section 1 introduction
+        // section 1 introduction
         'modules/dimpvis_warmup/',
         'modules/dimpvis_heatmap_rv_q1/',
-        'modules/dimpvis_heatmap_co_q1/',
-        'modules/dimpvis_heatmap_cd_q1/',
-        'modules/dimpvis_heatmap_od_q1/',
-
         'modules/dimpvis_heatmap_rv_q2/',
-        'modules/dimpvis_heatmap_co_q2/',
-        'modules/dimpvis_heatmap_cd_q2/',
-        'modules/dimpvis_heatmap_od_q2/',
-
         'modules/dimpvis_heatmap_rv_q3/',
+
+        'modules/dimpvis_heatmap_co_q1/',
+        'modules/dimpvis_heatmap_co_q2/',
         'modules/dimpvis_heatmap_co_q3/',
+
+        'modules/dimpvis_heatmap_cd_q1/',
+        'modules/dimpvis_heatmap_cd_q2/',
         'modules/dimpvis_heatmap_cd_q3/',
+
+        'modules/dimpvis_heatmap_od_q1/',
+        'modules/dimpvis_heatmap_od_q2/',
         'modules/dimpvis_heatmap_od_q3/',
         // conclusion
         'modules/dimpvis_preference',

@@ -32,6 +32,10 @@ var j2c = require('json2csv'),
         "time_diff_dimpvis_heatmap_co_q2",
         "heatmap_co_q3",
         "time_diff_dimpvis_heatmap_co_q3",
+
+        "interesting",
+        "confident",
+        "effective"
     ],
     data
 
