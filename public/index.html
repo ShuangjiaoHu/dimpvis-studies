@@ -60,6 +60,33 @@
     info['animate2'] = animate2;
     info['current_question'] = 0;
 
+    var questions = [
+        ['modules/dimpvis_heatmap_rv_q1/',
+            'modules/dimpvis_heatmap_co_q1/',
+            'modules/dimpvis_heatmap_cd_q1/',
+            'modules/dimpvis_heatmap_od_q1/',
+        ],
+        ['modules/dimpvis_heatmap_rv_q2/',
+            'modules/dimpvis_heatmap_co_q2/',
+            'modules/dimpvis_heatmap_cd_q2/',
+            'modules/dimpvis_heatmap_od_q2/',
+        ],
+        [
+            'modules/dimpvis_heatmap_rv_q3/',
+            'modules/dimpvis_heatmap_co_q3/',
+            'modules/dimpvis_heatmap_cd_q3/',
+            'modules/dimpvis_heatmap_od_q3/',
+        ]
+    ]
+
+
+    d3.shuffle(questions);
+
+    var conclusion = [ // conclusion
+        'modules/dimpvis_preference',
+        'modules/debrief/'
+    ]
+
     var modules = [
         // study introduction
         'modules/dimpvis_consent/', //must have
@@ -74,25 +101,15 @@
 
         // section 1 introduction
         'modules/dimpvis_warmup/',
-        'modules/dimpvis_heatmap_rv_q1/',
-        'modules/dimpvis_heatmap_rv_q2/',
-        'modules/dimpvis_heatmap_rv_q3/',
-
-        'modules/dimpvis_heatmap_co_q1/',
-        'modules/dimpvis_heatmap_co_q2/',
-        'modules/dimpvis_heatmap_co_q3/',
-
-        'modules/dimpvis_heatmap_cd_q1/',
-        'modules/dimpvis_heatmap_cd_q2/',
-        'modules/dimpvis_heatmap_cd_q3/',
-
-        'modules/dimpvis_heatmap_od_q1/',
-        'modules/dimpvis_heatmap_od_q2/',
-        'modules/dimpvis_heatmap_od_q3/',
-        // conclusion
-        'modules/dimpvis_preference',
-        'modules/debrief/'
     ];
+
+    for (let i = 0; i < 3; i++) {
+        modules = modules.concat(questions[i])
+    }
+
+    modules = modules.concat(conclusion);
+
+    console.log(modules);
 
     experimentr.addData(info);
     experimentr.sequence(modules).start();
